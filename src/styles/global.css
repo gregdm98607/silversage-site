@@ -1,0 +1,311 @@
+/* Silver Sage Media — Design Tokens & Global Styles */
+:root {
+  --sage: #7A8B6F;
+  --sage-light: #A8B89E;
+  --sage-pale: #E8EDE5;
+  --sand: #C4A96A;
+  --sand-light: #E8D9B8;
+  --sand-pale: #F5F0E6;
+  --earth: #6B5B4E;
+  --charcoal: #2C2C2C;
+  --off-white: #FAFAF7;
+  --white: #FFFFFF;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: var(--charcoal);
+  background: var(--off-white);
+  line-height: 1.7;
+}
+
+.sans {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ── Typography ── */
+h1, h2, h3 { line-height: 1.3; }
+h1 { font-size: 3rem; letter-spacing: 0.02em; }
+h2 { font-size: 2rem; color: var(--charcoal); margin-bottom: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+a { color: var(--sand); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--sage); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* ── Layout Helpers ── */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+
+.section-label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 0.5rem;
+}
+
+.section-intro {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--earth);
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  border-radius: 4px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.btn-primary { background: var(--sage); color: var(--white); }
+.btn-primary:hover { color: var(--white); }
+.btn-outline { background: transparent; color: var(--sage); border: 1px solid var(--sage); }
+.btn-white { background: var(--white); color: var(--sage); }
+
+/* ── Cards ── */
+.card {
+  background: var(--white);
+  border: 1px solid var(--sage-pale);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* ── Grid Systems ── */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 50%, var(--sand) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 6rem 2rem;
+}
+.hero .tagline {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.15rem;
+  opacity: 0.92;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+}
+
+/* ── Newsletter Box ── */
+.newsletter-box {
+  background: var(--sage-pale);
+  border-radius: 12px;
+  padding: 4rem 3rem;
+  text-align: center;
+  max-width: 700px;
+  margin: 5rem auto;
+}
+.email-form {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.email-form input {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--sage-light);
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 280px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.email-form button {
+  padding: 0.8rem 2rem;
+  background: var(--sage);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.email-form button:hover { background: var(--earth); }
+
+/* ── Book Cards ── */
+.book-cover {
+  background: var(--sand-light);
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--earth);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+.book-card {
+  background: var(--white);
+  border: 1px solid var(--sage-pale);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.book-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.book-info { padding: 1.5rem; }
+.book-info h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
+.book-info .author {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--sage);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.book-info p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--earth);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ── About Grid ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: start;
+}
+.about-photo {
+  background: var(--sand-light);
+  border-radius: 8px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--earth);
+  font-size: 0.85rem;
+}
+
+.about-text p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--earth);
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+}
+
+/* ── Contact ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.contact-form label {
+  display: block;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  color: var(--earth);
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid var(--sage-pale);
+  border-radius: 4px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+}
+
+.contact-form textarea { height: 120px; resize: vertical; }
+.contact-info {
+  padding: 2rem;
+  background: var(--sage-pale);
+  border-radius: 8px;
+}
+.contact-info h3 { margin-bottom: 1rem; }
+.contact-info p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--earth);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Blog Cards ── */
+.blog-card .date {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--sage);
+  margin-bottom: 0.5rem;
+}
+.blog-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.blog-card p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--earth);
+  font-size: 0.9rem;
+}
+
+/* ── Footer ── */
+footer {
+  background: var(--charcoal);
+  color: var(--sage-light);
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+}
+.footer-links { margin-bottom: 1rem; }
+.footer-links a {
+  color: var(--sage-light);
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--sand-light); }
+footer p { opacity: 0.7; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero { padding: 4rem 1.5rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  section { padding: 3rem 1.5rem; }
+  .newsletter-box { padding: 2.5rem 1.5rem; }
+}

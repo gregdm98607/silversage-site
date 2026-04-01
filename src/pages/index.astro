@@ -1,11 +1,82 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Silver Sage Media — Publishing, Technology, Family History"
+        description="Silver Sage Media is a Camas, Washington creative studio — publishing books rooted in the American West, building tools for creative businesses, and preserving family histories.">
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Silver Sage Media</h1>
+    <p class="tagline">Publishing stories rooted in the American West. Building tools for creative businesses. Preserving the histories that make us who we are.</p>
+    <a href="/books/" class="btn btn-white">Explore Our Books</a>
+  </div>
+
+  <!-- Our Brands -->
+  <section>
+    <p class="section-label">Our Brands</p>
+    <h2>Three Arms, One Mission</h2>
+    <p class="section-intro">Silver Sage Media brings together publishing, technology, and family history under one roof — each brand serving a distinct audience, all sharing a commitment to stories that matter.</p>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Silver Sage Books</h3>
+        <p class="sans">Literary fiction and nonfiction rooted in the landscapes and people of the American West. From dust-jacket to doorstep.</p>
+        <a href="/books/">Browse the catalog &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>Operation Granny Files</h3>
+        <p class="sans">Family history research, genealogy tools, and community workshops. Unlocking the stories hiding in your family tree.</p>
+        <a href="https://operationgrannyfiles.com">Visit OGF &rarr;</a>
+      </div>
+      <div class="card">
+        <h3>Conduital</h3>
+        <p class="sans">Technology strategy and digital media for creative businesses. AI consulting, technical writing, and systems that scale.</p>
+        <a href="https://conduital.com">Visit Conduital &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Titles -->
+  <section>
+    <p class="section-label">Featured Titles</p>
+    <h2>From Our Catalog</h2>
+    <div class="grid-3">
+      <div class="book-card">
+        <div class="book-cover">[ TLC Cover Image ]</div>
+        <div class="book-info">
+          <h3>The Lund Covenant</h3>
+          <p class="author">Greg Maxfield</p>
+          <p>A novel of the contemporary American West — landscape, memory, and the ties that hold us to place.</p>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">[ TUP Cover Image ]</div>
+        <div class="book-info">
+          <h3>The Unfolding Plot</h3>
+          <p class="author">Greg Maxfield</p>
+          <p>The next chapter in the Silver Sage Books catalog. Currently in development.</p>
+        </div>
+      </div>
+      <div class="book-card">
+        <div class="book-cover">[ Future Title ]</div>
+        <div class="book-info">
+          <h3>Coming Soon</h3>
+          <p class="author">Silver Sage Books</p>
+          <p>More titles on the way. Subscribe to the newsletter for release announcements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <div class="newsletter-box">
+    <h2>Stay in the Loop</h2>
+    <p class="sans">New releases, behind-the-scenes updates, and stories from the sagebrush. Delivered to your inbox — no spam, just substance.</p>
+    <div class="email-form">
+      <input type="email" placeholder="your@email.com" />
+      <button>Subscribe</button>
+    </div>
+  </div>
+
 </Layout>
