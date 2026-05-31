@@ -25,3 +25,8 @@ pnpm-debug.log*
 
 # Claude Code worktrees (transient local artifacts)
 .claude/worktrees/
+
+# planning-with-files scratch artifacts (local working memory)
+task_plan.md
+findings.md
+progress.md
